@@ -55,7 +55,7 @@ checkoutBtn.addEventListener('click', () => {
   localStorage.setItem('cartTotal', calculateTotal());
   
   // Redirect to payment page
-  window.location.href = '/payment.html';
+  window.location.href = 'payment.html';
 });
 
 // Contact form submission
