@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pago - Fashion Store</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Fashion Store</div>
+        <ul class="nav-links">
+          <li><a href="/">Volver a la tienda</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="payment-page">
+      <div class="payment-container">
+        <h1>Selecciona tu método de pago</h1>
+        <div class="order-summary">
+          <h2>Resumen de la orden</h2>
+          <div id="orderItems"></div>
+          <div class="order-total">
+            <strong>Total a pagar: $<span id="orderTotal">0</span></strong>
+          </div>
+        </div>
+
+        <div class="payment-methods">
+          <h2>Métodos de pago</h2>
+          <div class="payment-options">
+            <div class="payment-option">
+              <input type="radio" id="creditCard" name="paymentMethod" value="creditCard">
+              <label for="creditCard">
+                <img src="https://cdn-icons-png.flaticon.com/512/179/179457.png" alt="Tarjeta de crédito">
+                Tarjeta de Crédito
+              </label>
+            </div>
+            
+            <div class="payment-option">
+              <input type="radio" id="debitCard" name="paymentMethod" value="debitCard">
+              <label for="debitCard">
+                <img src="https://cdn-icons-png.flaticon.com/512/179/179457.png" alt="Tarjeta de débito">
+                Tarjeta de Débito
+              </label>
+            </div>
+            
+            <div class="payment-option">
+              <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+              <label for="paypal">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174861.png" alt="PayPal">
+                PayPal
+              </label>
+            </div>
+          </div>
+
+          <form id="paymentForm" class="payment-form">
+            <div class="form-group card-details" id="cardDetails">
+              <label for="cardNumber">Número de tarjeta</label>
+              <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+              
+              <div class="card-info-row">
+                <div>
+                  <label for="expiryDate">Fecha de expiración</label>
+                  <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5">
+                </div>
+                <div>
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" placeholder="123" maxlength="3">
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="pay-button">Pagar ahora</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="/payment.js"></script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Store</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Fashion Store</div>
+        <ul class="nav-links">
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#products">Productos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+        <div class="cart-icon" id="cartIcon">
+          🛒 <span id="cartCount">0</span>
+        </div>
+      </nav>
+    </header>
+
+    <div id="cartModal" class="cart-modal">
+      <div class="cart-content">
+        <h2>Carrito de Compras</h2>
+        <div id="cartItems"></div>
+        <div class="cart-total">
+          <p>Total: $<span id="cartTotal">0</span></p>
+          <button id="checkoutBtn" class="checkout-btn">Pagar</button>
+        </div>
+        <button id="closeCart" class="close-btn">&times;</button>
+      </div>
+    </div>
+
+    <main>
+      <section id="home" class="hero">
+        <h1>Nueva Colección 2024</h1>
+        <p>Descubre las últimas tendencias en moda</p>
+      </section>
+
+      <section class="products" id="products">
+        <h2>Productos Destacados</h2>
+        <div class="product-grid">
+          <div class="product-card" data-id="1" data-price="49.99">
+            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400" alt="Camisa casual">
+            <h3>Camisa Casual</h3>
+            <p>$49.99</p>
+            <button class="add-to-cart">Añadir al carrito</button>
+          </div>
+          <div class="product-card" data-id="2" data-price="79.99">
+            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400" alt="Jeans">
+            <h3>Jeans Clásicos</h3>
+            <p>$79.99</p>
+            <button class="add-to-cart">Añadir al carrito</button>
+          </div>
+          <div class="product-card" data-id="3" data-price="89.99">
+            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400" alt="Vestido">
+            <h3>Vestido Elegante</h3>
+            <p>$89.99</p>
+            <button class="add-to-cart">Añadir al carrito</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2>Contacto</h2>
+        <div class="contact-container">
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="name">Nombre:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Mensaje:</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Enviar Mensaje</button>
+          </form>
+          <div class="contact-info">
+            <h3>Información de Contacto</h3>
+            <p><strong>Dirección:</strong> Calle Principal 123</p>
+            <p><strong>Email:</strong> info@fashionstore.com</p>
+            <p><strong>Teléfono:</strong> (123) 456-7890</p>
+            <div class="social-links">
+              <a href="#" class="social-link">Instagram</a>
+              <a href="#" class="social-link">Facebook</a>
+              <a href="#" class="social-link">Twitter</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contacto</h3>
+          <p>Email: info@fashionstore.com</p>
+          <p>Teléfono: (123) 456-7890</p>
+        </div>
+        <div class="footer-section">
+          <h3>Síguenos</h3>
+          <p>Instagram</p>
+          <p>Facebook</p>
+          <p>Twitter</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/main.js"></script>
+  </body>
+</html>
